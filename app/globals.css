@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
+
+/* ---- CSS VARIABLES (DESIGN SYSTEM) ---- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-gradient: linear-gradient(
+    135deg,
+    #e0f2ff 0%,
+    #f0f9ff 40%,
+    #ecfeff 100%
+  );
+
+  --primary: #2563eb; /* blue-600 */
+  --text-dark: #0f172a; /* slate-900 */
+  --text-muted: #475569; /* slate-600 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-dark);
+  font-family: var(--font-inter);
 }
+
+section {
+  scroll-margin-top: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
